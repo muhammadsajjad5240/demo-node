@@ -45,8 +45,20 @@ const getUserById = async (userId) => {
   return user;
 };
 
+/**
+ * Get all uses
+ * @returns {Promise<Users>}
+ */
+
+const getAllUsers = async () => {
+  const user = await User.find();
+
+  return user;
+};
+
 module.exports = {
   getUserById,
   createUser,
   getUserByEmail,
+  getAllUsers,
 };
